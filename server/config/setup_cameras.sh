@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-apt-get install -y -q crtmpserver 
-apt-get install -y -q supervisor 
+sudo apt-get -o -y -q DPkg::Options::="--force-confmiss" --reinstall install crtmpserver
+sudo apt-get -o -y -q DPkg::Options::="--force-confmiss" --reinstall install supervisor 
 
 patch /etc/init.d/supervisor < supervisor.patch
 
