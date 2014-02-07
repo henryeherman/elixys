@@ -3,10 +3,10 @@
 sudo apt-get -o -y -q DPkg::Options::="--force-confmiss" --reinstall install crtmpserver
 sudo apt-get -o -y -q DPkg::Options::="--force-confmiss" --reinstall install supervisor 
 
-patch /etc/init.d/supervisor < supervisor.patch
+sudo patch /etc/init.d/supervisor < supervisor.patch
 
-ln -s /opt/elixys/config/elixyssupervisord.conf  \ 
+sudo ln -s /opt/elixys/config/elixyssupervisord.conf  \ 
         /etc/supervisor/conf.d
 
-service crtmpserver restart
-service supervisor restart
+sudo service crtmpserver restart
+sudo service supervisor restart
